@@ -404,10 +404,10 @@
                 $(this).unbind();
                 var configDepdrop = eval($(this).attr('data-krajee-depdrop'));
                 var inputID = $(this).attr('id');
-                var matchID = inputID.match(regex);
+                var matchID = inputID.match(regexID);
                 if (matchID && matchID.length === 4) {
                     for (index = 0; index < configDepdrop.depends.length; ++index) {
-                        var match = configDepdrop.depends[index].match(regex);
+                        var match = configDepdrop.depends[index].match(regexID);
                         if (match && match.length === 4) {
                             configDepdrop.depends[index] = match[1] + matchID[2] + match[3];
                         }
